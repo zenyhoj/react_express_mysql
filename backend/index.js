@@ -1,14 +1,21 @@
 import express from "express";
 import mysql from "mysql";
 import cors from "cors";
+import dotenv from "dotenv";
 
+dotenv.config();
 const app = express();
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "admin_production",
-  password: "joe.bals1215~",
-  database: "production",
+  // host: "localhost", //process.env.MYSQL_HOST
+  // user: "admin_production", //process.env.MYSQL_USER
+  // password: "joe.bals1215~", //process.env.MYSQL_PASSWORD
+  // database: "production", //process.env.MYSQL_DB
+
+  host: process.env.MYSQL_HOST,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.MYSQL_DB,
 });
 
 // express server middleware to allow json from postman to interact with the application
