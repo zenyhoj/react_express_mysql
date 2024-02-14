@@ -4,6 +4,7 @@ import { Suppliers } from "./pages/Suppliers";
 import { Update } from "./pages/Update";
 import { Add } from "./pages/Add";
 import { Delete } from "./pages/Delete";
+import "./style.css";
 
 function App() {
   return (

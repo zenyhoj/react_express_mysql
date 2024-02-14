@@ -34,36 +34,38 @@ export const Add = () => {
       <h1>Add New Supplier</h1>
       <input
         type="text"
-        placeholder="company name"
+        placeholder="Company name"
         onChange={handleChange}
         name="company_name"
       />
       <input
         type="text"
-        placeholder="address"
+        placeholder="Address"
         onChange={handleChange}
         name="address"
       />
       <input
         type="text"
-        placeholder="contact number"
+        placeholder="Contact number"
         onChange={handleChange}
         name="contact_number"
       />
       <input
         type="text"
-        placeholder="contact person"
+        placeholder="Contact person"
         onChange={handleChange}
         name="contact_person"
       />
       <input
         type="text"
-        placeholder="products"
+        placeholder="Products"
         onChange={handleChange}
         name="products"
       />
 
-      <button onClick={handleClick}>Add</button>
+      <button className="btn-add" onClick={handleClick}>
+        Add Supplier
+      </button>
     </div>
   );
 };
